@@ -1,6 +1,6 @@
 ﻿# Proof Artifacts
 
-Run date: 2026-02-24 17:11:44 +07:00
+Run date: 2026-02-24 17:18:12 +07:00
 
 Fork URL: https://github.com/rozidev/intercom
 Selected app profile id: lane_board
@@ -17,9 +17,11 @@ Rationale: This run differs via semantic naming pair (seal/review_*) plus tx-sim
 - run.log: pear runtime startup capture (sanitized).
 - run-screenshot.png: visual render of run.log.
 - command-mapping.log: protocol mapTxCommand output for selected command pair.
-- tx-sim.log: simulation command string and preflight mapping evidence.
+- tx-sim.log: runtime `cli_result` capture from real `/tx --command ... --sim 1` execution via SC-Bridge CLI.
 
 ## Commands used
 - pear run . --peer-store-name proof-lane --msb-store-name proof-lane-msb --subnet-channel proof-delivery-board --dht-bootstrap 127.0.0.1:49737 --sidechannels proof-lane-room
-- /tx --command '{"op":"seal_delivery_lane_lane","status":"MVP ready","note":"competition-proof"}' --sim 1
-- /tx --command "review_delivery_lane_lane"
+- pear run . --peer-store-name proof-lane --msb-store-name proof-lane-msb --subnet-channel proof-delivery-board --dht-bootstrap 127.0.0.1:49737 --sidechannels proof-lane-room --sc-bridge 1 --sc-bridge-cli 1 --sc-bridge-port 49344 --sc-bridge-token <token>
+- {"type":"auth","token":"<token>"}
+- {"type":"cli","command":"/tx --command '{\"op\":\"seal_delivery_lane_lane\",\"status\":\"MVP ready\",\"note\":\"competition-proof\"}' --sim 1"}
+- {"type":"cli","command":"/tx --command \"review_delivery_lane_lane\" --sim 1"}
