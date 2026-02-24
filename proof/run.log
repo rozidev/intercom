@@ -1,0 +1,53 @@
+﻿node.exe : [ WARNING ] To complete Pear installation, prepend the following to the system Path environment variable:
+At [sanitized-home]\AppData\Roaming\npm\pear.ps1:24 char:5
++     & "node$exe"  "$basedir/node_modules/pear/pear.js" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([ WARNING ] To ...nment variable::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[sanitized-home]\AppData\Roaming\pear\bin
+Until then, this executable spawns the `pear` binary.
+Fix automatically with: pear run pear://runtime
+[sidechannel] welcome required for non-entry channels; entry "0000intercom" is open and does not require owner/welcome.
+=============== STARTING MSB ===============
+State initialization...
+Network initialization...
+
+#####################################################################################
+# MSB Address:    trac18p5asjcvx9ujugsehl7lkdsrxfmggu2cew9ue8590qqyn9sx9prs5d463c  #
+# MSB Writer:     264c2a3fd1f7d54b329491fc336e57c6d5f23f3ad5b098c21310b4515fa1a292 #
+#####################################################################################
+Channel: 0000trac0network0msb0mainnet0000
+isIndexer: false
+isWriter: false
+MSB Unsigned Length: 19719
+MSB Signed Length: 19719
+Balance: 0
+=============== STARTING PEER ===============
+
+######################################################################################
+# Peer Address:     bcc56c8a9c4151f96832936ac6743d073ea9769c862cb939a769379fb850f542 #
+# Peer Writer:      f5a700ed77c6d8db5366a924aacc1186d0059871e1fea0d7b671662723770ae5 #
+######################################################################################
+
+isIndexer: true
+isWriter: true
+
+
+====================INTERCOM ====================
+MSB network bootstrap: acbc3a4344d3a804101d40e53db1dda82b767646425af73599d4cd6577d69685
+MSB channel: 0000trac0network0msb0mainnet0000
+MSB store: stores\proof-lane-msb
+Peer store: stores\proof-lane
+Peer DHT bootstrap nodes: 127.0.0.1:49737
+Peer subnet bootstrap: f5a700ed77c6d8db5366a924aacc1186d0059871e1fea0d7b671662723770ae5
+Peer subnet channel: proof-delivery-board
+Peer pubkey (hex): bcc56c8a9c4151f96832936ac6743d073ea9769c862cb939a769379fb850f542
+Peer trac address (bech32m): trac1hnzkez5ug9glj6pjjd4vvapaqul2ja5uscktjwd8dymelwzs74pqpapfl8
+Peer writer key (hex): f5a700ed77c6d8db5366a924aacc1186d0059871e1fea0d7b671662723770ae5
+Sidechannel entry: 0000intercom
+Sidechannel extras: proof-lane-room
+================================================================
+
+Sidechannel: ready
+
